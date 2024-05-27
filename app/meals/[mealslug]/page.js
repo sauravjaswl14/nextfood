@@ -1,8 +1,13 @@
 import React from 'react'
 
 function Meal({params}) {
+ 
   return (
-    <div>Meal</div>
+    <>
+      <h2>Meal Page</h2>
+      <p>{params.mealslug}</p>
+
+    </>
   )
 }
 

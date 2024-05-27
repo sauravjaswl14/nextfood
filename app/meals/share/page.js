@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ShareMeals() {
+function ShareMealPage() {
   return (
-    <div>ShareMeals</div>
+    <h2>Share Meal</h2>
   )
 }
 
-export default ShareMeals
+export default ShareMealPage
