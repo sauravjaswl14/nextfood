@@ -3,9 +3,17 @@ import React from "react";
 import classes from "./page.module.css";
 import Image from "next/image";
 import { getMeal } from "@/lib/meals";
+import { notFound } from "next/navigation";
 
 function MealDetailsPage({ params }) {
   const meal = getMeal(params.mealslug);
+
+  //if meal is undefined, if we didn't find the meal and then show the closest not found page available in this project, that can indeed be triggered by calling a special function that's provided by Next.js
+
+  if (!meal) {
+    //calling this function will stop this component from executing and will show the closest not-found or error page
+    notFound();
+  }
 
   meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
 
