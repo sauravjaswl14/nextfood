@@ -1,4 +1,6 @@
 const sql = require("better-sqlite3");
+
+//create a new database if it doesn't exist, otherwise it will use the existing one
 const db = sql("meals.db");
 
 const dummyMeals = [
